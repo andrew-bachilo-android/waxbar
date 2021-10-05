@@ -659,12 +659,50 @@ h6 {
   z-index: 100;
 }
 
+.image-slider__image p {
+  color: #f77099;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 15%;
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+
+.image-slider__image p::before {
+  content: "";
+  display: block;
+  border-top: 1px solid #fff;
+  width: 40%;
+  height: 20px;
+}
+
+.image-slider__image p::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #fff;
+  width: 40%;
+  height: 20px;
+}
+
 .image-slider__image .about {
   position: relative;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -673,6 +711,10 @@ h6 {
 }
 
 .image-slider__image .about__container {
+  width: 100%;
+}
+
+.image-slider__image .about__title-wrapper {
   position: relative;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 0 20px 0 20px;
@@ -741,8 +783,45 @@ h6 {
   color: #fff;
 }
 
-.advances {
-  background-color: #fdf0ee;
+.advances-wrapper {
+  background: #fdf0ee url("../img/bg-2.jpg") center/cover no-repeat;
+}
+
+.about-us {
+  padding-top: 25px;
+}
+
+.about-us__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-us__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+}
+
+.about-us__text {
+  margin-top: 25px;
+  padding: 25px;
+  background-color: rgba(0, 0, 0, 0.493);
+  -webkit-box-shadow: 0 5px 15px 0px rgba(255, 255, 255, 0.568);
+          box-shadow: 0 5px 15px 0px rgba(255, 255, 255, 0.568);
+  border-radius: 0 20px 0 20px;
+  border: 1px solid #f77099;
+}
+
+.about-us__text p {
+  margin-top: 15px;
+  color: #fff;
+}
+
+.about-us__text p span {
+  color: #f77099;
+  font-weight: 700;
 }
 
 .advances__container {
@@ -932,7 +1011,7 @@ h6 {
 
 .gallery {
   padding: 25px 0;
-  background-color: #fdf0ee;
+  background-color: #fff;
 }
 
 .gallery__title {
@@ -958,10 +1037,11 @@ h6 {
 .gallery__item {
   display: block;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 25%;
-          flex: 0 0 25%;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
   overflow: hidden;
   position: relative;
+  border: 1px solid #f77099;
 }
 
 .gallery__item::after {
@@ -1151,10 +1231,6 @@ h6 {
   display: none;
 }
 
-.swiper-pagination .swiper-pagination-bullet {
-  background-color: #fdf0ee;
-}
-
 .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #f77099;
 }
@@ -1239,6 +1315,43 @@ h6 {
   height: 100%;
 }
 
+.footer {
+  padding: 25px 0;
+  background-color: rgba(0, 0, 0, 0.705);
+}
+
+.footer__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+}
+
+.footer__dev span {
+  color: #fff;
+}
+
+.footer__dev span a {
+  color: #f77099;
+}
+
+.footer__dev span a::before {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
 * {
   scroll-behavior: smooth;
 }
@@ -1262,6 +1375,34 @@ body.lock {
   width: 100%;
   min-height: 100vh;
   position: relative;
+}
+
+.memo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 21px;
+  font-weight: 700;
+  border: 1px solid #f77099;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  color: #f77099;
+  position: fixed;
+  bottom: 50px;
+  left: 20px;
+  z-index: 500;
+}
+
+.memo:hover {
+  opacity: 0.5;
 }
 
 .scroll-up {
@@ -1306,43 +1447,6 @@ body.lock {
   border-right: 2px solid #f77099;
 }
 
-.footer {
-  padding: 25px 0;
-  background-color: rgba(0, 0, 0, 0.705);
-}
-
-.footer__container {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 20px;
-}
-
-.footer__dev span {
-  color: #fff;
-}
-
-.footer__dev span a {
-  color: #f77099;
-}
-
-.footer__dev span a::before {
-  font-size: 18px;
-  margin-right: 5px;
-}
-
 @media (min-width: 960px) {
   .popup .contact-form__title {
     font-size: calc(24px + 6 * ((1280px - 320px) / 960));
@@ -1352,8 +1456,16 @@ body.lock {
     font-size: calc(14px + 2 * ((1280px - 320px) / 960));
   }
 
+  .image-slider__image p {
+    font-size: calc(18px + 10 * ((1280px - 320px) / 960));
+  }
+
   .image-slider__image .about__title {
     font-size: calc(24px + 16 * ((1280px - 320px) / 960));
+  }
+
+  .about-us__title {
+    font-size: calc(24px + 12 * ((1280px - 320px) / 960));
   }
 
   .advances__item-desc {
@@ -1456,8 +1568,16 @@ body.lock {
     font-size: calc(14px + 2 * ((100vw - 320px) / 960));
   }
 
+  .image-slider__image p {
+    font-size: calc(18px + 10 * ((100vw - 320px) / 960));
+  }
+
   .image-slider__image .about__title {
     font-size: calc(24px + 16 * ((100vw - 320px) / 960));
+  }
+
+  .about-us__title {
+    font-size: calc(24px + 12 * ((100vw - 320px) / 960));
   }
 
   .advances__item-desc {
@@ -1738,5 +1858,7 @@ body.lock {
     font-weight: 700;
   }
 }
+
+.webp .advances-wrapper{ background: #fdf0ee url(../img/bg-2.webp) center/cover no-repeat; }
 
 .webp .price{ background: #000 url(../img/bg-1.webp) center/cover no-repeat; }
