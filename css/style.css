@@ -1282,10 +1282,6 @@ h6 {
   bottom: 0 !important;
 }
 
-.swiper-pagination .swiper-notification {
-  display: none;
-}
-
 .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #f77099;
 }
