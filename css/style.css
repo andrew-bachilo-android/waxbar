@@ -1201,7 +1201,7 @@ h6 {
 }
 
 .feedback-slider {
-  overflow-x: hidden;
+  overflow: hidden;
   margin-top: 30px;
   padding-bottom: 25px;
   position: relative;
