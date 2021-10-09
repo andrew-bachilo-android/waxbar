@@ -13,16 +13,25 @@
 
     $mail -> setFrom('Waxbar@gmail.ru', 'Студия депиляции');
     $mail -> addAddress('andrew.bachilo@gmail.com');
-    $mail -> Subject = 'Заявка с сайта';
+    $mail -> Subject = 'Отзыв с сайта';
 
 
-    $body = '<h1>Перезвонить</h1>';
+    $body = '<h1>Отзыв</h1>';
     if (trim(!empty($_POST['name']))) {
         $body.='<p><strong>Имя:</strong> '.$_POST['name'].'</p>';
     }
 
-    if (trim(!empty($_POST['tel']))) {
-        $body.='<p><strong>Телефон:</strong> '.$_POST['tel'].'</p>';
+    if (trim(!empty($_POST['text']))) {
+        $body.='<p><strong>Текст:</strong> '.$_POST['text'].'</p>';
+    }
+
+    if (!empty($_FILES['image']['tmp_name'])) {
+        $filePath = __DIR__ . "/files/" . $_FILES['image']['name'];
+        if (copy($_FILES['image']['tmp_name'], $filePath)) {
+            $fileAttach = $filePath;
+            $body.='<p><strong>Фото в приложении</strong></p>';
+            $mail -> addAttachment($fileAttach);
+        }
     }
 
     $mail -> Body = $body;
