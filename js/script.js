@@ -402,7 +402,7 @@ for (let i = 0; i < links.length; i++) {
 
 scrollUp.addEventListener('click', function (e) {
     e.preventDefault();
-    document.querySelector('#header').scrollIntoView({
+    document.querySelector('#top').scrollIntoView({
         behavior: "smooth",
         block:"start"
     });
