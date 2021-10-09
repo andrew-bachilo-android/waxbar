@@ -678,7 +678,7 @@ h6 {
 
 .header__contacts span {
   color: #fff;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .header__contacts span::before {
@@ -1154,7 +1154,7 @@ h6 {
 }
 
 .feedback__text {
-  padding: 0 0 0 30px;
+  padding: 0 0 15px 30px;
   position: relative;
 }
 
@@ -1205,6 +1205,10 @@ h6 {
   margin-top: 30px;
   padding-bottom: 25px;
   position: relative;
+}
+
+.feedback-slider__slide {
+  min-height: 450px;
 }
 
 .nav-cont {
@@ -1276,6 +1280,10 @@ h6 {
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
   margin-right: 5px;
+}
+
+.swiper-pagination {
+  bottom: 0 !important;
 }
 
 .swiper-pagination .swiper-pagination-bullet-active {
@@ -1766,7 +1774,7 @@ body.lock {
 
   .header__contacts span {
     color: #fff;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .advances__item {
@@ -1858,7 +1866,7 @@ body.lock {
   }
 
   .header__contacts span {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .header__contacts span::before {

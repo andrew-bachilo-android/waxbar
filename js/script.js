@@ -83,6 +83,7 @@ new Swiper('.feedback-slider',{
     autoHeight: true,
 
     // centeredSlides: true,
+    //initialSlide: 1,
 
     slidesPerView: 1,
 
